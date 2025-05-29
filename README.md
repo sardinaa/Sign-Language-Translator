@@ -34,6 +34,7 @@ The implemented Transformer model includes:
 - Dropout regularization and LayerNorm
 - Output layer adapted for 100-class classification
 
+![Model Architecture](assets/transformer_architecture.png)
 
 ## Project Structure
 ```
