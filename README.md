@@ -16,7 +16,8 @@ This repository implements an end-to-end pipeline for isolated sign language rec
 7. [License](#license)  
 
 ## Features
-- Extracts hand, pose and face landmarks using MediaPipe.  
+- Extracts hand, pose and face landmarks using MediaPipe.
+- Handles missing frames with cubic interpolation and confidence-based filtering to ensure smooth sequences.
 - Applies data augmentation (rotation, zoom, shift, re-anchoring wrists).  
 - Normalizes sequences to a consistent body reference frame.  
 - Trains a Transformer classifier on landmark sequences.  
@@ -24,6 +25,15 @@ This repository implements an end-to-end pipeline for isolated sign language rec
 - Provides evaluation scripts with precision/recall/F1 and confusion matrix display.  
 - Real-time webcam prediction with overlaid text.  
 - Utility to generate side-by-side landmark comparison videos.
+
+## Model Architecture
+The implemented Transformer model includes:
+- Positional encoding for temporal order
+- Multi-head self-attention layers
+- Feed-forward networks with ReLU activations
+- Dropout regularization and LayerNorm
+- Output layer adapted for 100-class classification
+
 
 ## Project Structure
 ```
