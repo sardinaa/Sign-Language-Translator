@@ -2,6 +2,8 @@
 
 This repository implements an end-to-end pipeline for isolated sign language recognition using MediaPipe for pose/face/hand landmark extraction and a Transformer-based model for classification. It supports data preprocessing, augmentation, normalization, training, evaluation and real-time prediction.
 
+![Example Word Detected](img/book.gif)
+
 ## Table of Contents
 1. [Features](#features)  
 2. [Project Structure](#project-structure)  
@@ -34,7 +36,7 @@ The implemented Transformer model includes:
 - Dropout regularization and LayerNorm
 - Output layer adapted for 100-class classification
 
-![Model Architecture](assets/transformer_architecture.png)
+![Model Architecture](img/transformer_architecture.png)
 
 ## Project Structure
 ```
